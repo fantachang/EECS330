@@ -14,7 +14,13 @@ body {
     text-align: center;
     color: #fff;
 }
-
+.backbutton_contain{
+    text-align: left;
+    padding:50px;
+}
+.backbutton{
+    width: 100px;
+}
 .page-container {
     margin: 120px auto 0 auto;
 }
