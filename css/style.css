@@ -123,7 +123,6 @@ button:hover {
         0 2px 7px 0 rgba(0,0,0,.2);
 }
 
-<<<<<<< HEAD
 button:active {
     -moz-box-shadow:
         0 15px 30px 0 rgba(255,255,255,.15) inset,
@@ -134,38 +133,6 @@ button:active {
     box-shadow:        
         0 5px 8px 0 rgba(0,0,0,.1) inset,
         0 1px 4px 0 rgba(0,0,0,.1);
-=======
-.navbar {
-  margin-bottom:0;
-  border-radius:0;
-}
-.navbar-nav li  a {
-    padding-left: 7px;
-    padding-right: 7px;
-  }
-
-.container
-{
-  width: 100%
-}
-#headerImage
-{
-  background: url('../images/backimg.jpg');
-  height:90%;
-width: 45%;
-    margin: 2%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-#headerImage h1
-{
-  margin-left:460px;
-  margin-top:130px;
-  color: #83a5b9;
-  font-size:46px;
-}
->>>>>>> parent of a44d730... change
 
     border: 0px solid #ef4300;
 }
