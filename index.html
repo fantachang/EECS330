@@ -69,7 +69,7 @@
 						if(pass1!=pass2){
                             alert("wrong password");
                         }
-                        if(!validateEmail(email)||email[length(email)-3]+email[length(email)-2]+email[length(email)-1]+email[length(email)]==".edu"){
+                        if(!validateEmail(email)||email.indexOf(".edu") == -1){
                             alert("wrong email");
                         }
                         else {
