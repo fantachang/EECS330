@@ -46,16 +46,35 @@
             <div class="page-container">
               <h1 style="margin-left:-100px;">Register</h1>
             <form action="" method="post">
-                <input type="text" name="username" class="username" placeholder="Username">
+                <input type="text" name="username" class="username" placeholder="Username" id= "username1">
                 <div class="clear"></div>
-                <input type="password" name="password" class="password" placeholder="Password">
+                <input type="password" name="password" class="password" placeholder="Password" id="pass1">
                 <div class="clear"></div>
-                <input type="retype-password" name="retype-password" class="retype-password" placeholder="Retype-Password">
-                <input type="email" name="email" class="email" placeholder="Email Address(.edu email ONLY)">
+                <input type="retype-password" name="retype-password" class="retype-password" placeholder="Retype-Password" id=pass2>
+                <input type="email" name="email" class="email" placeholder="Email Address(.edu email ONLY)" id="email1">
                 <div class="clear" style="height:30px;"></div>
               
-                <button type="submit" style="margin-right:60px; width:100px;">Register</button>
-                
+                <button type="submit" style="margin-right:60px; width:100px;" onclick="regist()">Register</button>
+                <script language="javascript">
+                    function regist(){
+                        user  = document.getElementById("username1").value
+                        pass1 = document.getElementById("pass1").value
+                        pass2 = document.getElementById("pass2").value
+                        email = document.getElementById("email1").value
+                        if(pass1!=pass2){
+                            alert("wrong password");
+                        }
+                        if(validateEmail(email)||email[length(email)-3]+email[length(email)-2]+email[length(email)-1]+email[length(email)]==".edu"){
+                            alert("wrong email");
+                        }
+                        else{alert("hello "+user);}
+                    }
+                    function validateEmail(email) 
+                    {
+                        var re = /\S+@\S+\.\S+/;
+                        return re.test(email);
+                    }
+                </script>
                 <div class="clear"></div>
                 
             </form>
