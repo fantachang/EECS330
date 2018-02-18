@@ -50,7 +50,7 @@
                 <div class="clear"></div>
                 <input type="password" name="password" class="password" placeholder="Password" id="pass1">
                 <div class="clear"></div>
-                <input type="retype-password" name="retype-password" class="retype-password" placeholder="Retype-Password" id=pass2>
+                <input type="password" name="retype-password" class="retype-password" placeholder="Retype-Password" id=pass2>
                 <input type="email" name="email" class="email" placeholder="Email Address(.edu email ONLY)" id="email1">
                 <div class="clear" style="height:30px;"></div>
               
@@ -61,21 +61,28 @@
                         pass1 = document.getElementById("pass1").value
                         pass2 = document.getElementById("pass2").value
                         email = document.getElementById("email1").value
-                        if(pass1!=pass2){
+                        numbers = email.length;
+						if (user==""||pass1==""||pass2==""||email=="") {
+							alert("please fill in all the required information");
+						}
+						
+						if(pass1!=pass2){
                             alert("wrong password");
                         }
-                        if(validateEmail(email)||email[length(email)-3]+email[length(email)-2]+email[length(email)-1]+email[length(email)]==".edu"){
+                        if(!validateEmail(email)||email[length(email)-3]+email[length(email)-2]+email[length(email)-1]+email[length(email)]==".edu"){
                             alert("wrong email");
                         }
-                        else{alert("hello "+user);}
+                        else {
+							alert("hello");}
                     }
+					
                     function validateEmail(email) 
                     {
-                        var re = /\S+@\S+\.\S+/;
-                        return re.test(email);
+                        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
                     }
                 </script>
->>>>>>> 7dbd61ba9e10e28804e9e86fbd7c1a2d84810fa8
+
                 <div class="clear"></div>
                 
             </form>
