@@ -32,14 +32,21 @@
         <div class="page-container">
             <h1>Login</h1>
             <form action="" method="post">
-                <input type="text" name="username" class="username" placeholder="Username">
-                <input type="password" name="password" class="password" placeholder="Password">
+                <input type="text" name="username" class="username" placeholder="Username" id="name">
+                <input type="password" name="password" class="password" placeholder="Password" id="pass">
                 <button type="submit" onclick="xx()">Sign me in</button>
                 <script language="javascript">
                     function xx()
                     {
-                        alert("Success !");
+                        name1=document.getElementById("name").value
+                        pass1=document.getElementById("pass").value
+                        if (name1==""||pass1==""){
+                            alert("please fill in all the required information");
+                        }
+                        else{
                         
+                         window.location.href='dash/dashboard.html'
+                        }
                     }
                 </script>
                 <div>
