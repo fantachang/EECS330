@@ -1,3 +1,36 @@
+function regist(){
+						
+						user  = document.getElementById("username1").value
+                        pass1 = document.getElementById("pass1").value
+                        pass2 = document.getElementById("pass2").value
+                        email = document.getElementById("email1").value
+                        numbers = email.length;
+						if (user==""||pass1==""||pass2==""||email=="") {
+							alert("please fill in all the required information");
+						}
+						
+						else if(pass1!=pass2){
+                            alert("wrong password");
+                        }
+                        else if(!validateEmail(email)||email.indexOf(".edu") == -1){
+                            alert("wrong email");
+                        }
+                        else {
+							alert("hello");
+							window.location.assign("https://www.w3schools.com");
+							}
+						
+                    
+					}
+					
+					
+                    function validateEmail(email) 
+                    {
+                        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+                    }
+					
+					
 $('document').ready(function(){
 
   var latestUrl = "http://acadprojects.com/py/notes/sharing/note";
@@ -63,150 +96,9 @@ $('document').ready(function(){
 
             $("#loader").css('display','none');
 
-            $(".btnLike").on('click', function(e) {
-                var b=$('.btnLike').index(this);
-                var Id = $(".btnLike")[b].id;
-                var like = $('span')[b].innerHTML;
-
-                if(oldId == Id) {
-                    return 0;
-                } else {
-                var docsId = {'doc_id': Id};
-                $.ajax({
-                    type: "PUT",
-                    url: 'https://acadprojects.com/py/notes/sharing/note',
-                    data: JSON.stringify(docsId),
-                    contentType: 'application/json',
-                    success: function(result) {
-                        if(result) {
-                            like = parseInt(like)+1;
-                            $('span')[b].innerHTML = like;
-                            oldId = Id;
-                        }
-                    }
-                });
-            }
-        });
-
-
-
         }});
     }
 
-
-
-    $('#arts').on('click', function(){
-
-
-      $("#notesNavigation ul li").removeClass('active');
-
-      $(this).parent().addClass('active');
-
-      var url = "https://acadprojects.com/py/notes/sharing/note?category=arts";
-      getNotes(url);
-    });
-
-    $("#engineering").on('click', function(){
-      $("#notesNavigation ul li").removeClass('active');
-      $(this).parent().addClass('active');
-
-      var url = "https://acadprojects.com/py/notes/sharing/note?category=engineering";
-      getNotes(url);
-
-    });
-
-    $("#science").on('click', function(){
-      $("#notesNavigation ul li").removeClass('active');
-      $(this).parent().addClass('active');
-
-      var url = "https://acadprojects.com/py/notes/sharing/note?category=science";
-      getNotes(url);
-
-    });
-
-    $("#maths").on('click', function(){
-      $("#notesNavigation ul li").removeClass('active');
-      $(this).parent().addClass('active');
-
-      var url = "https://acadprojects.com/py/notes/sharing/note?category=mathematics";
-      getNotes(url);
-
-    });
-
-    $("#latest").on('click', function(){
-      $("#notesNavigation ul li").removeClass('active');
-      $(this).parent().addClass('active');
-
-      var url = "https://acadprojects.com/py/notes/sharing/note";
-      getNotes(url);
-
-    });
-
-$("#submitBtn").on('click', function(){
-      var docName = $("#fileName").val();
-      var docDescription = $("#description").val();
-
-      var subject = $("#subject").val();
-      var documenType = $("#documentType").val();
-
-      var myFile = $("input[type=file]")[0].files[0];
-
-
-      if(docName == undefined || docName == "")
-      {
-        alert("Please fill Document Name");
-        return false;
-      }
-
-      if(docDescription == undefined || docDescription == "")
-      {
-        alert("Please fill Document Description");
-        return false;
-      }
-
-      if(subject == undefined || subject == "")
-      {
-        alert("Please Select Subject");
-        return false;
-      }
-
-      if(documenType == undefined || documenType == "")
-      {
-        alert("Please Select Document type");
-        return false;
-      }
-
-      if(myFile == undefined || myFile == "")
-      {
-        alert("Please Select a file to upload");
-        return false;
-      }
-
-      $("#loader").css('display', 'block');
-
-      var formdata = new FormData();
-
-      formdata.append('file', myFile);
-      formdata.append('document_type' , documenType);
-      formdata.append('doc_description' , docDescription);
-      formdata.append('doc_name' , docName);
-      formdata.append('category' , subject);
-
-      $.ajax({
-        url: 'https://acadprojects.com/py/notes/sharing/note',
-        data: formdata,
-        type: 'POST',
-        contentType: false,
-        processData: false,
-        success: function(result)
-        {
-          alert("Submitted");
-
-          $("#loader").css('display', 'none');
-          location.reload();
-        }
-      });
-  });
-
-
 });
+
+

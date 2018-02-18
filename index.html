@@ -55,33 +55,7 @@
                 <div class="clear" style="height:30px;"></div>
               
                 <button type="submit" style="margin-right:60px; width:100px;" onclick="regist()">Register</button>
-                <script language="javascript">
-                    function regist(){
-                        user  = document.getElementById("username1").value
-                        pass1 = document.getElementById("pass1").value
-                        pass2 = document.getElementById("pass2").value
-                        email = document.getElementById("email1").value
-                        numbers = email.length;
-						if (user==""||pass1==""||pass2==""||email=="") {
-							alert("please fill in all the required information");
-						}
-						
-						if(pass1!=pass2){
-                            alert("wrong password");
-                        }
-                        if(!validateEmail(email)||email.indexOf(".edu") == -1){
-                            alert("wrong email");
-                        }
-                        else {
-							alert("hello");}
-                    }
-					
-                    function validateEmail(email) 
-                    {
-                        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-                    }
-                </script>
+                
 
                 <div class="clear"></div>
                 
