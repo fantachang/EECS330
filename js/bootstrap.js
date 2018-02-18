@@ -30,7 +30,14 @@ if (typeof jQuery === 'undefined') {
 
   // CSS TRANSITION SUPPORT (Shoutout: http://www.modernizr.com/)
   // ============================================================
-
+function regist(){
+    user  = document.getElementById("username1").value
+    pass1 = document.getElementById("pass1").value
+    pass2 = document.getElementById("pass2").value
+    email = document.getElementById("email1").value
+    
+    alert(user)
+}
   function transitionEnd() {
     var el = document.createElement('bootstrap')
 
