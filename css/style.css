@@ -60,7 +60,7 @@ float: right!important;
 #headerImage
 {
   background: url('../images/4.jpg');
-  height:400px;
+  height:600px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -113,11 +113,10 @@ a.btnLike:focus {
 
 .page-container {
 	float:right;
-	margin:8%;
 	text-align:center;
 }
 
-.page-container hl{
+.page-container h1{
 	text-align:center;
 	margin-right:30px;	
 }
@@ -139,14 +138,7 @@ a.btnLike:focus {
 	height:5px;
 }
 
-/*
- *
- * Template Name: Fullscreen Login
- * Description: Login Template with Fullscreen Background Slideshow
- * Author: Anli Zaimi
- * Author URI: http://azmind.com
- *
- */
+/*copied form login css*/
 
 
 body {
@@ -198,9 +190,9 @@ input {
     -ms-transition: all .2s;
 }
 
-input:-moz-placeholder { color: #fff; }
-input:-ms-input-placeholder { color: #fff; }
-input::-webkit-input-placeholder { color: #fff; }
+input:-moz-placeholder { color: #666; }
+input:-ms-input-placeholder { color: #666; }
+input::-webkit-input-placeholder { color: #666; }
 
 input:focus {
     outline: none;
