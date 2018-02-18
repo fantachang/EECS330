@@ -55,7 +55,9 @@ float: right!important;
 
 .container
 {
-  width: 100%
+  width: 90%;
+  alignment-adjust:central;
+  text-align:center;
 }
 #headerImage
 {
@@ -117,8 +119,7 @@ a.btnLike:focus {
 }
 
 .page-container h1{
-	text-align:center;
-	margin-right:30px;	
+	text-align:center;	
 }
 
 .page-container button{
@@ -129,7 +130,7 @@ a.btnLike:focus {
 .page-container input{
 	alignment-adjust:central;
 	float:right;
-	margin-right:30px;
+	margin-right:19%;
 }
 
 
