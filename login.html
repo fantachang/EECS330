@@ -40,18 +40,27 @@
                     {
                         name1=document.getElementById("name").value
                         pass1=document.getElementById("pass").value
-                        /*if (name1==""||pass1==""){
+                        if (name1==""||pass1==""){
                             alert("please fill in all the required information");
                         }
                         else{
                         
-                        */
+                  		alert("success");
+						document.getElementById("name").value="";
+						document.getElementById("pass").value="";
 						 window.location.href='dash/dashboard.html';
+						 }
                         
                     }
                 </script>
                 <div>
-                <button type="submit">Forget password</button>
+                <button type="submit" onClick="error()">Forget password</button>
+                <script language="javascript">
+				function error() {
+                window.location.href='dash/error.html';
+				
+				}
+				</script>
                 </div>
                 <div class="error"><span>+</span></div>
             </form>

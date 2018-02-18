@@ -4,23 +4,27 @@ function regist(){
                         pass1 = document.getElementById("pass1").value
                         pass2 = document.getElementById("pass2").value
                         email = document.getElementById("email1").value
-                        numbers = email.length;
+                      
 						if (user==""||pass1==""||pass2==""||email=="") {
-							alert("please fill in all the required information");
+							alert("Please fill in all the required information");
 						}
 						
 						else if(pass1!=pass2){
-                            alert("wrong password");
+                            alert("Wrong password");
                         }
-                        else if(!validateEmail(email)||email.indexOf(".edu") == -1){
-                            alert("wrong email");
+                        else if(!validateEmail(email)||email.indexOf(".edu") == -1) {
+                            alert("Wrong email");
                         }
                         else {
-							alert("hello");
-							window.location.assign("https://www.w3schools.com");
+							alert("Hello New User. Please click Log in button!");
+						document.getElementById("username1").value="";
+						document.getElementById("pass1").value="";
+						document.getElementById("pass2").value="";
+						document.getElementById("email1").value="";
+						window.location.href='dash/dashboard.html';
 							}
-						
-                    
+							
+							
 					}
 					
 					
