@@ -21,7 +21,8 @@ function regist(){
 						document.getElementById("pass1").value="";
 						document.getElementById("pass2").value="";
 						document.getElementById("email1").value="";
-						window.location.href='dash/dashboard.html';
+						
+						jump();
 							}
 							
 							
@@ -33,6 +34,11 @@ function regist(){
                         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
                     }
+					
+					function jump() {
+			  window.location.href = 'dash/dashboard.html';			  
+		  }
+					
 					
 					
 $('document').ready(function(){
