@@ -714,6 +714,8 @@ footer .footer-copyright {
   footer .col-md-4 {
     padding-top: 42px;
   }
+  
+}
     .modal-open {
   overflow: hidden;
 }
@@ -1296,6 +1298,31 @@ fieldset[disabled] .btn-link:focus {
 .btn-block + .btn-block {
   margin-top: 5px;
 }
+
+
+
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity .15s linear;
+       -o-transition: opacity .15s linear;
+          transition: opacity .15s linear;
 }
 
-
+.close {
+  float: right;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  filter: alpha(opacity=20);
+  opacity: .2;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  filter: alpha(opacity=50);
+  opacity: .5;
+}
