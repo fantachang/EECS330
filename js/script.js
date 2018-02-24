@@ -16,7 +16,7 @@ function regist(){
                             alert("Wrong email");
                         }
                         else {
-							alert("Hello New User. Please click Log in button!");
+							
 						document.getElementById("username1").value="";
 						document.getElementById("pass1").value="";
 						document.getElementById("pass2").value="";
