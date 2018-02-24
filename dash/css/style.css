@@ -118,19 +118,7 @@ a:hover, a:active, a:focus {
     Preloader section              
 -----------------------------------------*/
 
-.preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 99999;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  background: none repeat scroll 0 0 #ffffff;
-}
+
 
 .sk-spinner-wordpress.sk-spinner {
   background-color: #bdc3c7;
@@ -179,9 +167,9 @@ a:hover, a:active, a:focus {
 
 .navbar-default {
     background: #ffffff;
-    padding: 18px 0;
+    padding: 10px 0;
     border: none;
-    margin-top: 62px;
+    margin-top: 20px;
 }
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
@@ -1384,4 +1372,11 @@ button:active {
         0 1px 4px 0 rgba(0,0,0,.1);
 
     border: 0px solid #ef4300;
+}
+
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
