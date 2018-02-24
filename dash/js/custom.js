@@ -19,3 +19,7 @@ window.location.href = '../index.html';
 function addcourse() {
 window.location.href = 'addcourse.html';
 }
+
+function uploadnote() {
+window.location.href = 'upload.html';	
+}
