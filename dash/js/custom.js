@@ -15,3 +15,7 @@ function errorjump() {
 function jumpback() {
 window.location.href = '../index.html';	
 }
+ 
+function addcourse() {
+window.location.href = 'addcourse.html';
+}
