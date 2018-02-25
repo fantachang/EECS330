@@ -23,3 +23,23 @@ window.location.href = 'addcourse.html';
 function uploadnote() {
 window.location.href = 'upload.html';	
 }
+
+function notepage() {
+	course  = document.getElementById("subject").value;
+    file= document.getElementById("fileName").value;
+    material = document.getElementById("notesFile").value;
+    if (course == "" || file == "" || material == "" ) {
+		alert("Please fill in all the required information");	
+	}
+	else {
+		document.getElementById("subject").value="";
+		document.getElementById("fileName").value="";
+		document.getElementById("notesFile").value="";
+	alert('Successfully Uploaded');
+	window.location.href = '../noteSharing-master/index111.html';	
+	}
+}
+
+function jump() {
+window.location.href = 'dashboard.html';
+}
