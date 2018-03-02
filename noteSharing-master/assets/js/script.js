@@ -43,22 +43,7 @@ $('document').ready(function(){
               {
                 countStudyMaterial++;
                 $('#studyMaterials tbody').append('<tr> <td> ' + countStudyMaterial +' </td> <td>'+notesName+'</td> <td>'+description+'</td> <td>'+subject+'</td> <td><a target="_blank" href="'+url+'">Download</a></td><td> <a href="#" class="btnLike" id="' + arr_id[i] + '"><i class="fa fa-thumbs-up fa-x" aria-hidden="true"></i> <span> ' +  likes + '</span></a></td></tr>');
-
               }
-              else if(type == 'Question Papers')
-              {
-                countQuestionPaper++;
-                $('#questionPapers tbody').append('<tr> <td> ' + countQuestionPaper +' </td> <td>'+notesName+'</td> <td>'+description+'</td> <td>'+subject+'</td> <td><a target="_blank" href="'+url+'">Download</td><td> <a href="#" class="btnLike" id="' + arr_id[i] + '"><i class="fa fa-thumbs-up fa-x" aria-hidden="true"></i> <span> ' +  likes + '</span></a></td></tr>');
-
-              }
-              else if(type == 'Project Report')
-              {
-                countProjectReport++;
-                $('#projectReports tbody').append('<tr> <td> ' + countProjectReport +' </td> <td>'+notesName+'</td> <td>'+description+'</td> <td>'+subject+'</td> <td><a target="_blank" href="'+url+'">Download</td><td> <a href="#" class="btnLike" id="' + arr_id[i] + '"><i class="fa fa-thumbs-up fa-x" aria-hidden="true"></i> <span> ' +  likes + '</span></a></td> </tr>');
-
-              }
-
-
             }
 
             $("#loader").css('display','none');
