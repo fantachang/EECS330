@@ -111,4 +111,14 @@ $('document').ready(function(){
 
 });
 
+function logout() {
+	window.location.href = 'index.html';	
+}
 
+function jump() {
+window.location.href = 'dash/dashboard.html';
+}
+
+function courselist() {
+window.location.href = 'noteSharing-master/index111.html';	
+}
