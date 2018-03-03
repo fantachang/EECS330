@@ -1,16 +1,17 @@
 'use strict';
   var arr_id = [];
     var newNotelist = [];
-function CreatNote(doc_id, doc_name, doc_description,doc_subject,lke_count){
-  this.doc_id = doc_id;
+
+function CreatNote(doc_name, doc_description,doc_subject,lke_count){
   this.doc_name = doc_name;
   this.doc_description = doc_description;
     this.subject = doc_subject;
     this.lke_count = lke_count;
-    return Note;
+    return this;
 }
 var count=4;
-function add(){  
+init();
+function add(Notes){  
             var tab=document.getElementById("studyMaterials");  
          //   var userId=$("#userId").value;  
         //    var userName=$("#userName").value;  
@@ -24,10 +25,10 @@ function add(){
             var likeTd=newTr.insertCell(4);
             idTd.innerHTML=count;  
     count++;
-            nameTd.innerHTML="userName";  
-            DesTd.innerHTML="userAge";
-            subTd.innerHTML="EECS391";
-            likeTd.innerHTML=0;
+            nameTd.innerHTML=Notes.doc_name;  
+            DesTd.innerHTML=Notes.doc_description;
+            subTd.innerHTML=Notes.subject;
+            likeTd.innerHTML=Notes.lke_count;
             
 }
 function creatlist(){
@@ -57,13 +58,12 @@ function addNotes2(Notelist)  {
         } 
 
     
-var Note1= new CreatNote(1, "Note", "Lecture Note","EECS391",30*Math.random());
-function init(){
-    var Note2 = creatlist();
-    addNotes2(Note2);
-    Document.getElementById('studyMaterials').delete
 
+function init(){
+    var Note1= new CreatNote("Note", "Lecture Note","EECS391",0);
+    add(Note1);
 }
+
 /*
     $('#arts').on('click', function(){
 
