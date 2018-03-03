@@ -1,85 +1,70 @@
-$('document').ready(function(){
-
-  var latestUrl = "http://acadprojects.com/py/notes/sharing/note";
-  getNotes(latestUrl);
+'use strict';
   var arr_id = [];
-  var flag = false;
-  var oldId ='';
-    function getNotes(dataUrl)
-    {
-      $("#loader").css('display', 'block');
-
-      $.ajax({
-        url: dataUrl,
-        type: "GET",
-        success: function(result){
-            console.log(result);
-
-            $("#studyMaterials tbody").empty();
-            $("#questionPapers tbody").empty();
-            $("#projectReports tbody").empty();
-
-            var myNotes = result.notes;
-
+    var newNotelist = [];
+function CreatNote(doc_id, doc_name, doc_description,doc_subject,lke_count){
+  this.doc_id = doc_id;
+  this.doc_name = doc_name;
+  this.doc_description = doc_description;
+    this.subject = doc_subject;
+    this.lke_count = lke_count;
+    return Note;
+}
+var count=4;
+function add(){  
+            var tab=document.getElementById("studyMaterials");  
+         //   var userId=$("#userId").value;  
+        //    var userName=$("#userName").value;  
+        //    var userAge=$("#userAge").value;  
+  
+            var newTr=tab.insertRow(1);  
+            var idTd=newTr.insertCell(0);  
+            var nameTd=newTr.insertCell(1);  
+            var DesTd=newTr.insertCell(2); 
+            var subTd=newTr.insertCell(3);
+            var likeTd=newTr.insertCell(4);
+            idTd.innerHTML=count;  
+    count++;
+            nameTd.innerHTML="userName";  
+            DesTd.innerHTML="userAge";
+            subTd.innerHTML="EECS391";
+            likeTd.innerHTML=0;
+            
+}
+function creatlist(){
+    var newNotelist = [];
+    for(var count=0;count<5;count++){
+ var noteslide =new CreatNote(count, "Note", "Lecture Note","EECS391",30);
+         newNotelist[count]= noteslide;
+    }
+    return newNotelist;
+}
+function addNotes2(Notelist)  {
+            var myNotes = Notelist;
             var length = myNotes.length;
-
             var countStudyMaterial = 0;
-            var countQuestionPaper = 0;
-            var countProjectReport = 0;
-
             for(var i = 0;i<length;i++)
             {
               var noteObject = myNotes[i];
                arr_id[i] = noteObject.doc_id;
               var notesName = noteObject.doc_name;
               var description = noteObject.doc_description;
-              var subject = noteObject.subject.subject;
-              var url = noteObject.doc_url;
+              var subject = noteObject.subject; 
               var likes = noteObject.like_count;
-
-              var type = noteObject.document_type;
-
-              if(type == 'Study Material')
-              {
                 countStudyMaterial++;
-                $('#studyMaterials tbody').append('<tr> <td> ' + countStudyMaterial +' </td> <td>'+notesName+'</td> <td>'+description+'</td> <td>'+subject+'</td> <td><a target="_blank" href="'+url+'">Download</a></td><td> <a href="#" class="btnLike" id="' + arr_id[i] + '"><i class="fa fa-thumbs-up fa-x" aria-hidden="true"></i> <span> ' +  likes + '</span></a></td></tr>');
-              }
+                $('#studyMaterials tbody').append('<tr> <td> ' + countStudyMaterial +' </td> <td>'+notesName+'</td> <td>'+description+'</td> <td>'+subject+'</td> <td> <i class="fa fa-thumbs-up fa-x" aria-hidden="true"></i> <span> ' +  likes + '</span></a></td></tr>');
+            
             }
+        } 
 
-            $("#loader").css('display','none');
+    
+var Note1= new CreatNote(1, "Note", "Lecture Note","EECS391",30*Math.random());
+function init(){
+    var Note2 = creatlist();
+    addNotes2(Note2);
+    Document.getElementById('studyMaterials').delete
 
-            $(".btnLike").on('click', function(e) {
-                var b=$('.btnLike').index(this);
-                var Id = $(".btnLike")[b].id;
-                var like = $('span')[b].innerHTML;
-
-                if(oldId == Id) {
-                    return 0;
-                } else {
-                var docsId = {'doc_id': Id};
-                $.ajax({
-                    type: "PUT",
-                    url: 'https://acadprojects.com/py/notes/sharing/note',
-                    data: JSON.stringify(docsId),
-                    contentType: 'application/json',
-                    success: function(result) {
-                        if(result) {
-                            like = parseInt(like)+1;
-                            $('span')[b].innerHTML = like;
-                            oldId = Id;
-                        }
-                    }
-                });
-            }
-        });
-
-
-
-        }});
-    }
-
-
-
+}
+/*
     $('#arts').on('click', function(){
 
 
@@ -192,6 +177,6 @@ $("#submitBtn").on('click', function(){
         }
       });
   });
+*/
 
 
-});
