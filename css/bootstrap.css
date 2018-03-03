@@ -6508,7 +6508,8 @@ button.close {
 .navbar-collapse:after,
 .pager:after,
 .panel-body:after,
-.modal-header:after,
+.modal-
+:after,
 .modal-footer:after {
   clear: both;
 }

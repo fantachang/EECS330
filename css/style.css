@@ -322,4 +322,34 @@ button:active {
 .connect a:hover { background-position: center bottom; }
 
 
+#headerBackground
+{
+  height:1000px;
+  background-position: center;
+  background-size: cover;
+}
 
+#content {
+  margin-left:4%;
+  margin-right:4%;
+  margin-top:2px;	
+  background:#FFF;
+  height:630px;
+  background: url('../images/note2.jpg');
+  background-position: center;
+  background-repeat:no-repeat;
+  background-size:contain;
+  
+  	
+}
+
+#comment {
+	
+	
+	
+}
+
+#postcomment	{
+	
+	
+}
