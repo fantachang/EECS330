@@ -10,7 +10,7 @@ function CreatNote(doc_name, doc_description,doc_subject,lke_count){
     return this;
 }
 var count=4;
-//init();
+init();
 function add(Notes){  
             var tab=document.getElementById("studyMaterials");  
          //   var userId=$("#userId").value;  
@@ -34,7 +34,7 @@ function add(Notes){
 function creatlist(){
     var newNotelist = [];
     for(var count=0;count<5;count++){
- var noteslide =new CreatNote(count, "Note", "Lecture Note","EECS391",30);
+ var noteslide =new CreatNote(count, "Note", "On processing...","EECS391",30);
          newNotelist[count]= noteslide;
     }
     return newNotelist;
@@ -60,7 +60,7 @@ function addNotes2(Notelist)  {
     
 
 function init(){
-    var Note1= new CreatNote("newNote", "Lecture Note","EECS391",0);
+    var Note1= new CreatNote("newNote", "On processing...","On processing...",0);
     add(Note1);
 }
 

@@ -32,13 +32,19 @@ function notepage() {
 		alert("Please fill in all the required information");	
 	}
 	else {
+        var labelc=document.getElementById("subject").value
 		document.getElementById("subject").value="";
 		document.getElementById("fileName").value="";
 		document.getElementById("notesFile").value="";
 	alert('Successfully Uploaded');
-        global.setMemory("key1", 1);
-        var label = ui("do_Label_2");
-	window.location.href = '../noteSharing-master/index111.html';	
+        if (labelc == "EECS391"){
+	window.location.href = '../noteSharing-master/index111391add.html';}
+        else if (labelc == "EECS351"){
+            window.location.href = '../noteSharing-master/index111351add.html';
+        }
+        else{
+            window.location.href = '../noteSharing-master/index111330add.html';
+        }
 	}
 }
 
