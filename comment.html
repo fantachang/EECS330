@@ -50,6 +50,8 @@
       	<div class="comment">
          <p>Notes posted by User1 on Mar 2nd, 2018.</p>
          <div class="clear"></div>
+         <h3 align="left" style="margin-left:22%;">Please rate this note:</h3>
+         <div class="clear"></div>
          <h3 align="left" style="margin-left:22%;">Leave a comment:</h3>
          <div class="clear"></div>
          		<div class="postcomment">
@@ -66,7 +68,7 @@ window.onload = function(){
   oBtn.onclick = function(){
     var sVal = oMsg.value;
     var oli = document.createElement("li");
-    oli.innerHTML = sVal;
+    oli.innerHTML = sVal + " <span>-- By test user</span>";
     var oli1 = oUl.getElementsByTagName("li")
 	if (oMsg.value == '') {
 		alert('No input!');
@@ -77,7 +79,7 @@ window.onload = function(){
     	}
 			else{
       	oUl.appendChild(oli);
-    	z}
+    	}
 	}
     oMsg.value='';
     
