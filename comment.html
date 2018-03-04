@@ -52,6 +52,100 @@
          <div class="clear"></div>
          <h3 align="left" style="margin-left:22%;">Please rate this note:</h3>
          <div class="clear"></div>
+         <div class="star">
+         <a href="javascript:click(1)"><img src="images/star.png" id="star1" onMouseOver="over(1)" onMouseOut="out(1)"/></a>
+         <span></span>
+		<a href="javascript:click(2)"><img src="images/star.png" id="star2" onMouseOver="over(2)" onMouseOut="out(2)" /></a>
+		<a href="javascript:click(3)"><img src="images/star.png" id="star3" onMouseOver="over(3)" onMouseOut="out(3)" /></a>
+		<a href="javascript:click(4)"><img src="images/star.png" id="star4" onMouseOver="over(4)" onMouseOut="out(4)"/></a>
+		<a href="javascript:click(5)"><img src="images/star.png" id="star5" onMouseOver="over(5)" onMouseOut="out(5)"/></a>
+		<span id="message"></span>
+         </div>
+         <script type="text/javascript">
+var check = 0;//selected rate
+
+/*over() mouse is hover*/
+function over(param){
+	if(param == 1){
+		$("#star1").attr("src","images/star_red.png");//get 1st star
+		$("#message").html("Very Poor");//Prompt
+	}else if(param == 2){
+		$("#star1").attr("src","images/star_red.png");
+		$("#star2").attr("src","images/star_red.png");
+		$("#message").html("Poor");
+	}else if(param == 3){
+		$("#star1").attr("src","images/star_red.png");
+		$("#star2").attr("src","images/star_red.png");
+		$("#star3").attr("src","images/star_red.png");
+		$("#message").html("Average");
+	}else if(param == 4){
+		$("#star1").attr("src","images/star_red.png");
+		$("#star2").attr("src","images/star_red.png");
+		$("#star3").attr("src","images/star_red.png");
+		$("#star4").attr("src","images/star_red.png");
+		$("#message").html("Good");
+	}else if(param == 5){
+		$("#star1").attr("src","images/star_red.png");
+		$("#star2").attr("src","images/star_red.png");
+		$("#star3").attr("src","images/star_red.png");
+		$("#star4").attr("src","images/star_red.png");
+		$("#star5").attr("src","images/star_red.png");
+		$("#message").html("Perfect");
+	}
+}
+/*out */
+function out(){
+	if(check == 1){//1 star situation
+		$("#star1").attr("src","images/star_red.png");
+		$("#star2").attr("src","images/star.png");
+		$("#star3").attr("src","images/star.png");
+		$("#star4").attr("src","images/star.png");
+		$("#star5").attr("src","images/star.png");
+		$("#message").html("Very Poor");
+	}else if(check == 2){
+		$("#star1").attr("src","images/star_red.png");
+		$("#star2").attr("src","images/star_red.png");
+		$("#star3").attr("src","images/star.png");
+		$("#star4").attr("src","images/star.png");
+		$("#star5").attr("src","images/star.png");
+		$("#message").html("Poor");
+	}else if(check == 3){
+		$("#star1").attr("src","images/star_red.png");
+		$("#star2").attr("src","images/star_red.png");
+		$("#star3").attr("src","images/star_red.png");
+		$("#star4").attr("src","images/star.png");
+		$("#star5").attr("src","images/star.png");
+		$("#message").html("Average");
+	}else if(check == 4){
+		$("#star1").attr("src","images/star_red.png");
+		$("#star2").attr("src","images/star_red.png");
+		$("#star3").attr("src","images/star_red.png");
+		$("#star4").attr("src","images/star_red.png");
+		$("#star5").attr("src","images/star.png");
+		$("#message").html("Good");
+	}else if(check == 5){
+		$("#star1").attr("src","images/star_red.png");
+		$("#star2").attr("src","images/star_red.png");
+		$("#star3").attr("src","images/star_red.png");
+		$("#star4").attr("src","images/star_red.png");
+		$("#star5").attr("src","images/star_red.png");
+		$("#message").html("Perfect");
+	}else if(check == 0){
+		$("#star1").attr("src","images/star.png");
+		$("#star2").attr("src","images/star.png");
+		$("#star3").attr("src","images/star.png");
+		$("#star4").attr("src","images/star.png");
+		$("#star5").attr("src","images/star.png");
+		$("#message").html("");
+	}
+}
+/*click() record*/
+function click(param){
+	
+	check = param;//record the star
+	out();// get star on or off
+}
+</script>
          <h3 align="left" style="margin-left:22%;">Leave a comment:</h3>
          <div class="clear"></div>
          		<div class="postcomment">
