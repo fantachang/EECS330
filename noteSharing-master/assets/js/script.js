@@ -60,7 +60,7 @@ function addNotes2(Notelist)  {
     
 
 function init(){
-    var Note1= new CreatNote("Note", "Lecture Note","EECS391",0);
+    var Note1= new CreatNote("newNote", "Lecture Note","EECS391",0);
     add(Note1);
 }
 

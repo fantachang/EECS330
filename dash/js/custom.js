@@ -36,6 +36,8 @@ function notepage() {
 		document.getElementById("fileName").value="";
 		document.getElementById("notesFile").value="";
 	alert('Successfully Uploaded');
+        global.setMemory("key1", 1);
+        var label = ui("do_Label_2");
 	window.location.href = '../noteSharing-master/index111.html';	
 	}
 }
