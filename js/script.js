@@ -122,3 +122,7 @@ window.location.href = 'dash/dashboard.html';
 function courselist() {
 window.location.href = 'noteSharing-master/index111.html';	
 }
+
+function show() {
+window.location.href = 'dash/dashboard1.html';
+}

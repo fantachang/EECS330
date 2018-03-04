@@ -1,5 +1,5 @@
 
-
+var flag = 0;
   /*-------------------------------------------------------------------------------
     PRE LOADER
   -------------------------------------------------------------------------------*/
@@ -41,5 +41,10 @@ function notepage() {
 }
 
 function jump() {
-window.location.href = 'dashboard.html';
+	window.location.href = 'dashboard.html';
 }
+
+function show() {
+	window.location.href = 'dashboard1.html';	
+}
+
