@@ -54,13 +54,14 @@
          <div class="clear"></div>
          <div class="star">
          <a href="javascript:click(1)"><img src="images/star.png" id="star1" onMouseOver="over(1)" onMouseOut="out(1)"/></a>
-         <span></span>
 		<a href="javascript:click(2)"><img src="images/star.png" id="star2" onMouseOver="over(2)" onMouseOut="out(2)" /></a>
 		<a href="javascript:click(3)"><img src="images/star.png" id="star3" onMouseOver="over(3)" onMouseOut="out(3)" /></a>
 		<a href="javascript:click(4)"><img src="images/star.png" id="star4" onMouseOver="over(4)" onMouseOut="out(4)"/></a>
 		<a href="javascript:click(5)"><img src="images/star.png" id="star5" onMouseOver="over(5)" onMouseOut="out(5)"/></a>
-		<span id="message"></span>
+		
          </div>
+         <div class=" com"> <span id="message"> </span> </div>
+         <div class="clear"></div>
          <script type="text/javascript">
 var check = 0;//selected rate
 
@@ -146,10 +147,13 @@ function click(param){
 	out();// get star on or off
 }
 </script>
-         <h3 align="left" style="margin-left:22%;">Leave a comment:</h3>
+        <div  text-align="center">
+         <h3>Leave a comment:</h3>
+         </div>
          <div class="clear"></div>
          		<div class="postcomment">
-         		<input id="msg" type="text" size="40" value=""> 			                <input id="btn" type="button" value="submit">
+         		<textarea id="msg" type="text" size="80" value="" ></textarea>
+                <input id="btn" type="button" value="submit">
 				<div class="clear" style="height:20px;"></div>
 				<div id="msg_c" align="center";></div>
 <script language="javascript">
