@@ -49,7 +49,7 @@ function notepage() {
 }
 
 function jump() {
-	window.location.href = 'dashboard.html';
+	window.location.href = 'dashboard1.html';
 }
 
 function show() {
