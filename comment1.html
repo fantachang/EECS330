@@ -149,6 +149,9 @@ function click(param){
 	out();// get star on or off
 }
 </script>
+        
+        <div id="msg_c"><hr /><img src="images/user_profile.jpg" style="height:20px; width:20px;float:left;"><div style="width:100%;border: 0px; ";>I think the fint size is the most important attribute in CSS</div> <br style="float:right;">-- By Faker</br><div id="msgre"></div> <input type="button" value="reply" onclick=" disp_prompt();" /><hr /></div>
+        
        <div id="msg_c"></div>
         <div >
          <h3 align="left" style="margin-left:22%; color: black">Leave a comment:</h3>
@@ -169,7 +172,6 @@ window.onload = function(){
   oBtn.onclick = function(){
     var sVal = oMsg.value;
     var oli = document.createElement("li");
-      var oli2 = document.createElement("li2");
     oli.innerHTML ='<div><hr /><img src="images/user_profile.jpg" style="height:20px; width:20px;float:left;"><div style="width:100%;border: 0px; ";>'+ sVal + '</div> <br style="float:right;">-- By test user</br><hr /></div>';
       
     var oli1 = oUl.getElementsByTagName("li")
@@ -190,11 +192,25 @@ window.onload = function(){
       for(var i=0; i<oSpan.length; i++){
         oSpan[i].onclick = function(){
           oUl.removeChild(this.parentNode);
+            
         }
       }
     
   }
 }  
+function disp_prompt()
+  {
+  var name=prompt("reply to Faker")
+  if (name!=null && name!="")
+    {
+    var oMsg1 = document.getElementById("msgre");
+    var oUl1 = document.createElement("ul1");
+        oMsg1.appendChild(oUl1);
+        var oli1 = document.createElement("li1");
+    oli1.innerHTML ='<div><hr /><img src="images/user_profile.jpg" style="height:20px; width:20px;float:left;margin-left:20%;"><div style="width:100%;border: 0px; ";>'+ name + '</div> <br style="float:right;margin-left:20%;">-- By test user</br><hr /></div>';
+        oUl1.appendChild(oli1);
+    }
+  }
 </script>
          		</div>
       		</div>
