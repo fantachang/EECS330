@@ -56,3 +56,7 @@ function show() {
 	window.location.href = 'dashboard1.html';	
 }
 
+function backtodash() {
+	window.location.href = 'dashboard.html';	
+	
+}

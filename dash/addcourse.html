@@ -9,7 +9,7 @@
 <meta name="author" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<title>Add new course</title>
+<title>Addcourse</title>
 
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -21,11 +21,69 @@
 </head>
 <body>
 
-<h1 style="margin:5%;">Welcome to our note-sharing website</h1>
-<h2 style="margin:5%;">We have connnected our database to your canvas account, click the button below to add all courses you registered for this quarter.</h2>
-<div align="center">
-<button type="button" onClick="show()" style="width:300px; height:200px; font-size:36px;">One Click to Add Course</button>
+
+
+
+
+<!-- Navigation section  -->
+
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+     <div class="container">
+
+          <div class="navbar-header">
+               <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+               </button>
+               <a href="#"><img src="images/user_profile.jpg" class="navbar-brand" alt="test_user" title="test_user"></img></a>
+          </div>
+          <div class="collapse navbar-collapse">
+               <ul class="nav navbar-nav navbar-right">
+                     <li class="active"><button type="button" onClick="backtodash()">Dashboard</button></li>
+                     <li><button type="button" onClick="jumpback()">Log out</button></li>
+               </ul>
+          </div>
+
+  </div>
 </div>
+
+<!-- Home Section -->
+
+<section id="home1" >
+     <div class="container">
+          <div class="row">
+               <div class="col-md-12 col-sm-12">
+                    <h1 style="font-weight:600; color:#666; margin:0px;">Add Course</h1>
+                    
+               </div>
+          </div>
+     </div>
+</section>
+
+<section id="course">
+	<div style="margin-left:8%; margin-right:8%;"> 
+    <h2> Hello TestUser!</h2> 
+    <h2>Based on our database, we find out that you registered for the following courses below:</h2>
+    
+    <ul>
+  	<li>EECS330: Human Computer Interactive</li>
+  	<li>EECS351: Intro to Computer Graphics</li>
+  	<li>EECS391: CMOS VLSI Design</li>
+	</ul> 
+    
+    <h2>Please click the button below to add courses to your dashboard.</h2>
+    </div>
+    <div class="clear"></div>
+    <div>&nbsp;</div>
+    <div align="center"><button type="button" onClick="addcourse()" style="width:300px; height:80px; font-size:24px;">One Click to Add course</button>
+    </div>
+    
+
+
+</section>
+
+
 
 
 
