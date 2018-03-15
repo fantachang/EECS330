@@ -42,7 +42,7 @@
 </nav> <!-- /.navbar-collapse -->
 
 <section id="header">
-      <div id="headerBackground" style="background:#999;">
+      <div id="headerBackground" style="background:#fff;">
       <div class="clear"></div>
       	<div id="content">
       	</div>
@@ -50,7 +50,8 @@
       	<div class="comment">
          <p>Notes posted by User1 on Mar 2nd, 2018.</p>
          <div class="clear"></div>
-         <h3 align="left" style="margin-left:22%;">Please rate this note:</h3>
+         <div>
+         <h3 align="left" style="margin-left:22%; color: black" >Please rate this note:</h3></div>
          <div class="clear"></div>
          <div class="star">
          <a href="javascript:click(1)"><img src="images/star.png" id="star1" onMouseOver="over(1)" onMouseOut="out(1)"/></a>
@@ -60,6 +61,7 @@
 		<a href="javascript:click(5)"><img src="images/star.png" id="star5" onMouseOver="over(5)" onMouseOut="out(5)"/></a>
 		
          </div>
+         
          <div class=" com"> <span id="message"> </span> </div>
          <div class="clear"></div>
          <script type="text/javascript">
@@ -147,15 +149,17 @@ function click(param){
 	out();// get star on or off
 }
 </script>
+       <div id="msg_c"></div>
         <div  text-align="center">
-         <h3>Leave a comment:</h3>
+         <h3 style="color:black;">Leave a comment:</h3>
          </div>
          <div class="clear"></div>
          		<div class="postcomment">
+         		
          		<textarea id="msg" type="text" size="80" value="" ></textarea>
                 <input id="btn" type="button" value="submit">
 				<div class="clear" style="height:20px;"></div>
-				<div id="msg_c" align="center";></div>
+				
 <script language="javascript">
 window.onload = function(){
   var oMsg = document.getElementById("msg");
@@ -166,7 +170,9 @@ window.onload = function(){
   oBtn.onclick = function(){
     var sVal = oMsg.value;
     var oli = document.createElement("li");
-    oli.innerHTML = sVal + " <span>-- By test user</span>";
+      var oli2 = document.createElement("li2");
+    oli.innerHTML ='<div><hr /><img src="images/user_profile.jpg" style="height:20px; width:20px;float:left;"><div style="width:100%;border: 0px; ";>'+ sVal + '</div> <br style="float:right;">-- By test user</br><hr /></div>';
+      
     var oli1 = oUl.getElementsByTagName("li")
 	if (oMsg.value == '') {
 		alert('No input!');
