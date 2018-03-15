@@ -123,6 +123,10 @@ function courselist() {
 window.location.href = 'noteSharing-master/index111.html';	
 }
 
+function courselist330() {
+window.location.href = 'noteSharing-master/index111330.html';	
+}
+
 function show() {
 window.location.href = 'dash/dashboard1.html';
 }
