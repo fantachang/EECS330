@@ -9,7 +9,7 @@ function CreatNote(doc_name, doc_description,doc_subject,lke_count){
     this.lke_count = lke_count;
     return this;
 }
-var count=4;
+var count=7;
 init();
 function add(Notes){  
             var tab=document.getElementById("studyMaterials");  

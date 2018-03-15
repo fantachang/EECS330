@@ -180,3 +180,7 @@ $("#submitBtn").on('click', function(){
 */
 
 
+function dash()	{
+	window.location.href = 'dash/dashboard1.html';	
+	
+}
