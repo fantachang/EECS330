@@ -58,6 +58,11 @@ function addNotes2(Notelist)  {
         } 
 
     
+function upload()	{
+	window.location.href = '../dash/upload.html';	
+	
+}
+	
 
 function init(){
     var Note1= new CreatNote("newNote", "On processing...","On processing...",0);
