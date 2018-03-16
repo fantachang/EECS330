@@ -28,7 +28,8 @@ function notepage() {
 	course  = document.getElementById("subject").value;
     file= document.getElementById("fileName").value;
     material = document.getElementById("notesFile").value;
-    if (course == "" || file == "" || material == "" ) {
+	quarter = document.getElementById("quarter").value;
+    if (course == "" || file == "" || material == "" || quarter == "" ) {
 		alert("Please fill in all the required information");	
 	}
 	else {
@@ -36,6 +37,7 @@ function notepage() {
 		document.getElementById("subject").value="";
 		document.getElementById("fileName").value="";
 		document.getElementById("notesFile").value="";
+		document.getElementById("quarter").value = "";
 	alert('Successfully Uploaded');
         if (labelc == "EECS391"){
 	window.location.href = '../noteSharing-master/index111391add.html';}
