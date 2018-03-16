@@ -170,7 +170,7 @@ window.onload = function(){
     var sVal = oMsg.value;
     var oli = document.createElement("li");
       var oli2 = document.createElement("li2");
-    oli.innerHTML ='<div ><hr style="height:1px;border:none;border-top:1px ridge black; " /><div ><img src="images/user_profile.jpg" style="height:30px; width:30px;float:left;"><div style="float:left;margin-left:3%">test user</div></div><br><div style="width;100%;align:left;">'+ sVal + '</div></br><hr style="height:1px;border:none;border-top:1px ridge black; " /></div>';
+    oli.innerHTML ='<div ><hr style="height:1px;border:none;border-top:1px ridge #666; " /><div ><img src="images/user_profile.jpg" style="height:30px; width:30px;float:left;"><div style="float:left;margin-left:3%">test user</div></div><br><div class="text-left" style="width;100%;margin-left:16%; margin-top:15px;">'+ sVal + '</div></br><div class="text-right"><input type="button" value="reply" onclick=" disp_prompt();" style="width:80px; height:30px;"/><hr style="height:1px;border:none;border-top:1px ridge #666; "/></div><hr style="height:1px;border:none;border-top:1px ridge #666; " /></div>';
       
     var oli1 = oUl.getElementsByTagName("li")
 	if (oMsg.value == '') {
