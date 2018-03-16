@@ -1,11 +1,14 @@
 function regist(){
+						first = document.getElementById("username2").value 
+						
+						last = document.getElementById("username1").value
 						
 						user  = document.getElementById("username1").value
                         pass1 = document.getElementById("pass1").value
                         pass2 = document.getElementById("pass2").value
                         email = document.getElementById("email1").value
                       
-						if (user==""||pass1==""||pass2==""||email=="") {
+						if (user==""||pass1==""||pass2==""||email==""||first==""||last=="") {
 							alert("Please fill in all the required information");
 						}
 						
@@ -17,6 +20,8 @@ function regist(){
                         }
                         else {
 							
+						document.getElementById("username3").value="";
+						document.getElementById("username2").value="";				
 						document.getElementById("username1").value="";
 						document.getElementById("pass1").value="";
 						document.getElementById("pass2").value="";
